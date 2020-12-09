@@ -10,12 +10,13 @@ See [.env](.env.example)
 - AZP_URL
 - AZP_TOKEN
 - AZP_AGENT_NAME
-- AZP_POOL (Default = Default. Create pool before creating the agents. [Create here](https://dev.azure.com/<organization>/<project>/_settings/agentqueues))
-
-#### Create docker network for agents
-docker network create azdo_agents_network
+- AZP_POOL (Default = Default. Create pool before creating the agents. [Create here](https://dev.azure.com/yorampeek/_settings/agentpools))
 
 #### Start command
+##### Create docker network for agents
+docker network create azdo_agents_network
+
+#### Start container
 docker run -d -e AZP_URL=$AZP_URL -e AZP_TOKEN=$AZP_TOKEN -e AZP_AGENT_NAME=$AZP_AGENT_NAME -e AZP_POOL=$AZP_POOL --net azdo_agents_network --name $AZP_AGENT_NAME dockeragent:latest
 
 #### Use docker-compose
