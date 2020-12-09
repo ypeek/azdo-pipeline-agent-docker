@@ -11,8 +11,6 @@ services:
       - AZP_AGENT_NAME=$AZP_AGENT_NAME
       - AZP_POOL=$AZP_POOL
     restart: unless-stopped
-    labels:
-      - log_me
 
 networks:
   azdo_agents_network:
