@@ -6,13 +6,14 @@ docker build -t dockeragent:latest .
 
 ### DEPLOY
 #### Environment variables needed to start
-See [.env](.env)
+See [.env](.env.example)
 - AZP_URL
 - AZP_TOKEN
 - AZP_AGENT_NAME
 - AZP_POOL (Default = Default. Create pool before creating the agents. [Create here](https://dev.azure.com/<organization>/<project>/_settings/agentqueues))
 
 #### Start command
-docker run -d 
+docker run -d dockeragent:latest
 
 #### Use docker-compose
+docker-compose -f azdoagent.yml up -d
