@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  azdoagent:
+    image: dockeragent:latest
+    container_name: azdoagent
+    environment:
+      - AZP_URL=$AZP_URL
+      - AZP_TOKEN=$AZP_TOKEN
+      - AZP_AGENT_NAME=$AZP_AGENT_NAME
+      - AZP_POOL=$AZP_POOL
+    restart: unless-stopped
+    labels:
+      - log_me
+
+networks:
+  azdo_network:
+    external: true
+

@@ -1,0 +1,16 @@
+# Vim session
+Session.vim
+
+# temporary
+.netrwhist
+*~
+
+# auto-generated tag files
+tags
+
+# Mac files
+.DS_Store
+
+# Repo files
+.env
+
