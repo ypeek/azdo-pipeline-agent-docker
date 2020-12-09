@@ -3,6 +3,8 @@ services:
   azdoagent:
     image: dockeragent:latest
     container_name: azdoagent
+    networks:
+      - azdo_agents_network
     environment:
       - AZP_URL=$AZP_URL
       - AZP_TOKEN=$AZP_TOKEN
@@ -13,6 +15,6 @@ services:
       - log_me
 
 networks:
-  azdo_network:
+  azdo_agents_network:
     external: true
 
