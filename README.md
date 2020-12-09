@@ -1,1 +1,1 @@
-# azdo-docker-agent
+docker build -t dockeragent:latest .
