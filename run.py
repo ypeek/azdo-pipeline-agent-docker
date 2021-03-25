@@ -11,7 +11,7 @@ parser.add_argument("--numberagents","-a", required=False,
 args = parser.parse_args()
 
 if args.numberagents:
-    numberagents = args.numberagents
+    numberagents = int(args.numberagents)
 else:
     numberagents = 1
 
