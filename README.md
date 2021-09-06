@@ -1,6 +1,3 @@
-## Build Status
-[![Build Status](https://dev.azure.com/yorampeek/UniversalExports/_apis/build/status/KPN_MB_Delen.BUILD?branchName=main)](https://dev.azure.com/yorampeek/UniversalExports/_build/latest?definitionId=6&branchName=main)
-
 ## Azure DevOps Pipeline Agent Docker Image
 This repository can be used to create an Azure DevOps Pipeline Agent for Docker.
 
