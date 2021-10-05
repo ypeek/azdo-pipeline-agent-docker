@@ -41,6 +41,6 @@ for agent_no in range(1, numberagents+1):
     print("========================")
     AZP_AGENT_NAME = f"{env_vars['AZP_AGENT_NAME']}_{agent_no}"
     print(f"Starting {AZP_AGENT_NAME}...")
-    cmd = f"docker run -d -e AZP_URL=$AZP_URL -e AZP_TOKEN=$AZP_TOKEN -e AZP_AGENT_NAME={AZP_AGENT_NAME} -e AZP_POOL=$AZP_POOL --net azdo_agents_network --name {AZP_AGENT_NAME} dockeragent:latest"
+    cmd = f"docker run --restart  always -d -e AZP_URL=$AZP_URL -e AZP_TOKEN=$AZP_TOKEN -e AZP_AGENT_NAME={AZP_AGENT_NAME} -e AZP_POOL=$AZP_POOL --net azdo_agents_network --name {AZP_AGENT_NAME} dockeragent:latest"
     os.system(cmd)
 
